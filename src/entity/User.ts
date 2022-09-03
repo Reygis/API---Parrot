@@ -4,10 +4,12 @@ import {
     Column,
     Unique,
     CreateDateColumn,
-    UpdateDateColumn 
+    UpdateDateColumn,
+    OneToMany
 } from "typeorm"
 import {Length, IsNotEmpty} from "class-validator"
 import * as bcrypt from "bcryptjs"
+import { Post } from "./Post"
 
 @Entity()
 @Unique(["email"])
@@ -42,6 +44,9 @@ export class User {
     @UpdateDateColumn()
     updatedAt: Date
 
+    @OneToMany(() => Post, post => post.user)
+    post: Post[]
+
     hashPassword(){
         this.password = bcrypt.hashSync(this.password, 8)
     }
@@ -49,4 +54,5 @@ export class User {
     checkIfUnencryptedPasswordIsValid(unecripytedPassword: string){
         return bcrypt.compareSync(unecripytedPassword, this.password)
     }
+
 }
