@@ -15,9 +15,9 @@ import { User } from "./User"
 @Entity()
 export class Post {
     @PrimaryGeneratedColumn()
-    id: number
+    idpost: number
 
-    @Column()
+    @Column("varchar",{length:300})
     @Length(4, 300)
     content: string
     
@@ -31,6 +31,6 @@ export class Post {
 
     @ManyToOne(() => User, user => user.post) 
 
-    @JoinColumn({ name: 'user_id' })
+    @JoinColumn({ name: 'user_iduser' })
     user: User
 }    

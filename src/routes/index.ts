@@ -1,10 +1,12 @@
 import {Router, Request, Response} from "express"
+import user from "./user"
 // import auth from "./auth"
-// import user from "./user"
+// import post from "./post"
 
 const routes = Router()
 
+routes.use("/user", user)
 // routes.use("/auth", auth)
-// routes.use("/user", user)
+// routes.use("/post", psot)
 
 export default routes

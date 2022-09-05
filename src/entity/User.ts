@@ -15,13 +15,13 @@ import { Post } from "./Post"
 @Unique(["email"])
 export class User {
     @PrimaryGeneratedColumn()
-    id: number
+    iduser: number
 
     @Column()
     @Length(4, 70)
     name: string
     
-    @Column()
+    @Column({unique: true})
     @Length(4, 70)
     email: string
     
@@ -31,6 +31,10 @@ export class User {
     @Column()
     @Length(6, 120)
     password: string
+
+    @Column()
+    @Length(6, 255)    
+    userphoto: string
 
     @Column()
     @IsNotEmpty()
