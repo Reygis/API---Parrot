@@ -1,5 +1,4 @@
-# Parrot
-# Hands_On04
+# Parrot Hands_On04
 
 <p align="center">
   <img src="./docs/logoGama.png" width="50%">
@@ -20,7 +19,7 @@
 1. após clonar o repositório, executar o comando `npm install` ou `yarn install`
 2. Criar um arquivo `.env` e alterar credenciais do banco de dados, baseado no arquivo `.env.example`
 3. Criar banco de dados sem tabelas (as tabelas serão criadas automaticamente) `create database parrot;`
-3. Script `npm dev` 
+3. Script `npm run dev` 
   
 ---
 ## :memo: Funcionalidades criadas: 
