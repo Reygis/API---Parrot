@@ -8,7 +8,7 @@ import {
     OneToMany
 } from "typeorm"
 import {Length, IsNotEmpty} from "class-validator"
-import * as bcrypt from "bcryptjs"
+import bcrypt from "bcryptjs"
 import { Post } from "./Post"
 
 @Entity()

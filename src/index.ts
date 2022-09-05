@@ -5,6 +5,7 @@ import {AppDataSource} from "./data-source"
 
 AppDataSource.initialize().then(()=>{
         const app = express()
+        app.use(express.json())
 
         //call middlewares
         // app.use(cors())
