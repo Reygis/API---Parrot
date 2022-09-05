@@ -4,16 +4,36 @@ import { userRepository } from "../repositories/userRepository";
 
 import { User } from "../entity/User";
 
-export class UserController {
+export class UserController {    
+    async listAll(req: Request, res: Response) {      
+        const users = await userRepository.find({
+            select: ["iduser", "name", "email", "apartment", "userphoto"]
+        })
+
+        return res.send(users)
+    }
+
+    async getOneById(req: Request, res: Response) {
+        const iduser: number = parseInt(req.params.iduser, 10)
+
+        let user: User
+
+        try {
+            user = await userRepository.findOneByOrFail({iduser})
+        } catch (error) {
+            return res.status(404).send("User not found")            
+        }
+       
+        return res.send(user)
+    }
 
     async create(req:Request, res: Response) {
-        const {name,email,apartment,password,userphoto} = req.body
+        const {name, email, apartment, password, userphoto} = req.body
         const userExists = await userRepository.findOneBy({ email })
 
 		if (userExists) {
 			return res.status(400).send('E-mail já existe')
 		}
-
 
         let user: User = new User()
         user.name = name
@@ -39,13 +59,13 @@ export class UserController {
         return res.status(201).send("User created")
     }
 
-
-    async editUser(req:Request, res:Response) {
+    async editUser(req:Request, res:Response) {      
         
         const iduser: number = parseInt(req.params.iduser, 10)
-
-        const {name,email,apartment,userphoto} = req.body
+       
+        const {name, email, apartment, userphoto} = req.body   
         
+
         let user: User
         try {
             user = await userRepository.findOneByOrFail({iduser})
@@ -56,13 +76,16 @@ export class UserController {
         if(name) {
             user.name = name
         }
+
         if(email) {
             user.email = email
         }
+
         if(apartment) {
             user.apartment = apartment
         }
-        if(name) {
+
+        if(userphoto) {
             user.userphoto = userphoto
         }
 
@@ -74,9 +97,9 @@ export class UserController {
         try {
             await userRepository.save(user)    
         } catch (error) {
-            return res.status(409).send("Email already in use")
+            return res.status(409).send("Usuario edited")
         }
 
-        return res.status(204)
+        return res.status(201).send("edited user")
     }
 }

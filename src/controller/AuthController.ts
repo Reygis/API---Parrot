@@ -3,17 +3,23 @@ import jwt from "jsonwebtoken";
 import { AppDataSource } from "../data-source";
 import { User } from "../entity/User";
 import config from "../config/config";
-
+import { userRepository } from "../repositories/userRepository";
 
 export class AuthController {
      async login(req: Request, res: Response) {
         let {email, password} = req.body
 
-        if(!(email && password)) {
-            return res.status(404).send()
-        }
+       // if(!(email && password)) {
+           // return res.status(404).send()
+       // }
 
-        const userRepository = AppDataSource.getRepository(User)
+       const userExists = await userRepository.findOneBy({ email})
+
+       if (!(userExists && password)) {
+           return res.status(400).send('E-mail ou senha inválidos')
+       }
+
+       // const userRepository = AppDataSource.getRepository(User)
         let user: User
 
         try {
@@ -29,7 +35,7 @@ export class AuthController {
         const token = jwt.sign(
             {userId: user.iduser, email: user.email},
             config.jwtSecret,
-            {expiresIn: "1h"}
+            {expiresIn: "4h"}
         )
 
         return res.send(token)
