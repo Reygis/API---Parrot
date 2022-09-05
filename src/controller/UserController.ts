@@ -8,6 +8,12 @@ export class UserController {
 
     async create(req:Request, res: Response) {
         const {name,email,apartment,password,userphoto} = req.body
+        const userExists = await userRepository.findOneBy({ email })
+
+		if (userExists) {
+			return res.status(400).send('E-mail já existe')
+		}
+
 
         let user: User = new User()
         user.name = name
@@ -31,5 +37,46 @@ export class UserController {
         }
 
         return res.status(201).send("User created")
+    }
+
+
+    async editUser(req:Request, res:Response) {
+        
+        const iduser: number = parseInt(req.params.iduser, 10)
+
+        const {name,email,apartment,userphoto} = req.body
+        
+        let user: User
+        try {
+            user = await userRepository.findOneByOrFail({iduser})
+        } catch (error) {
+            return res.status(404).send("User not found")
+        }
+
+        if(name) {
+            user.name = name
+        }
+        if(email) {
+            user.email = email
+        }
+        if(apartment) {
+            user.apartment = apartment
+        }
+        if(name) {
+            user.userphoto = userphoto
+        }
+
+        const errors = await validate(user)
+        if (errors.length > 0) {
+            return res.status(400).send(errors)
+        }
+
+        try {
+            await userRepository.save(user)    
+        } catch (error) {
+            return res.status(409).send("Email already in use")
+        }
+
+        return res.status(204)
     }
 }
