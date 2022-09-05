@@ -1,5 +1,4 @@
-# Parrot
-# Hands_On04
+# Parrot Hands_On04
 
 <p align="center">
   <img src="./docs/logoGama.png" width="50%">
