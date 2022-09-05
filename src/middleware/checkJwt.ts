@@ -13,8 +13,8 @@ export const checkJwt = (req:Request, res: Response, next: NextFunction) => {
         res.status(401).send
     }
 
-    const {userId, email} = jwtPayload
-    const newToken = jwt.sign({userId, email}, config.jwtSecret,{
+    const {iduser, email} = jwtPayload
+    const newToken = jwt.sign({iduser, email}, config.jwtSecret,{
         expiresIn: "1h"
     })
 

@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import jwt from "jsonwebtoken";
-import { AppDataSource } from "../data-source";
 import { User } from "../entity/User";
 import config from "../config/config";
 import { userRepository } from "../repositories/userRepository";
@@ -9,17 +8,12 @@ export class AuthController {
      async login(req: Request, res: Response) {
         let {email, password} = req.body
 
-       // if(!(email && password)) {
-           // return res.status(404).send()
-       // }
-
        const userExists = await userRepository.findOneBy({ email})
 
        if (!(userExists && password)) {
            return res.status(400).send('E-mail ou senha inválidos')
        }
 
-       // const userRepository = AppDataSource.getRepository(User)
         let user: User
 
         try {

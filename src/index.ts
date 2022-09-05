@@ -7,12 +7,6 @@ AppDataSource.initialize().then(()=>{
         const app = express()
         app.use(express.json())
 
-        //call middlewares
-        // app.use(cors())
-        // app.use(helmet())
-        // app.use(bodyParser.json())
-
-        // set all routes rom routes folder
         app.use(routes)
 
         app.listen(3030, ()=>{
