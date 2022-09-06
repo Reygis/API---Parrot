@@ -32,7 +32,13 @@ export class AuthController {
             {expiresIn: "4h"}
         )
 
-        return res.send({token})
+        return res.send({
+            token:token,
+            iduser:user.iduser,
+            name:user.name,
+            email:user.email,
+            apartment:user.apartment
+        })
     }
 }
 
