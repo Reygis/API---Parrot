@@ -37,11 +37,11 @@ Todas as informações da documentação da API podem ser vistas ao clicar em "R
 
 
 ## :keyboard: Desenvolvedores participantes
-## :keyboard: Backend
+## Backend
 [<sub>Reygis Azevedo</sub>](https://github.com/Reygis)  
-[<sub>Raphael Anizio da Silva </sub>](https://github.com/Reygis)  
-[<sub>Víctor André Santos Franco</sub>](https://github.com/Reygis)  
+[<sub>Raphael Anizio da Silva </sub>](https://github.com/raphaelaniziodasilva)  
+[<sub>Víctor André Santos Franco</sub>](https://github.com/VictorF05)
 
-## :keyboard: Frontend
+## Frontend
 [<sub>Pedro Gonçalves</sub>](https://github.com/Reygis)  
 [<sub>Matheus Allan Da Silva </sub>](https://github.com/Reygis)  
