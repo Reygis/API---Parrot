@@ -33,7 +33,7 @@ export class User {
     password: string
 
     @Column()
-    @Length(6, 255)    
+    @Length(0, 255)    
     userphoto: string
 
     @Column()
