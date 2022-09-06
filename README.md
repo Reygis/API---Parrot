@@ -33,16 +33,16 @@
 ---
 ## :memo: Funcionalidades criadas: 
 
-rota criar usuario `POST` `http://localhost:3030/user`
-rota editar usuario `PUT` `http://localhost:3030/user/:iduser`
-rota listar todos os usuarios `GET` `http://localhost:3030/user`
-rota listar usuario pelo iduser `GET` `http://localhost:3030/user/:iduser`
+* rota criar usuario `POST` `http://localhost:3030/user`
+* rota editar usuario `PUT` `http://localhost:3030/user/:iduser`
+* rota listar todos os usuarios `GET` `http://localhost:3030/user`
+* rota listar usuario pelo iduser `GET` `http://localhost:3030/user/:iduser`
 
-rota criar post  `POST` `http://localhost:3030/post`
-rota listar todos os post  `GET` `http://localhost:3030/post`
-rota listar todos os post de um unico usuario  `GET` `http://localhost:3030/post/:iduser`
++ rota criar post  `POST` `http://localhost:3030/post`
++ rota listar todos os post  `GET` `http://localhost:3030/post`
++ rota listar todos os post de um unico usuario  `GET` `http://localhost:3030/post/:iduser`
 
-rota login `POST` `http://localhost:3030/login`
+- rota login `POST` `http://localhost:3030/login`
 
 ---
 ## :page_with_curl: Documentação
@@ -54,11 +54,7 @@ Todas as informações da documentação da API podem ser vistas ao clicar em "R
 
 
 ## :keyboard: Desenvolvedores participantes
-## Backend
+
 [<sub>Reygis Azevedo</sub>](https://github.com/Reygis)  
 [<sub>Raphael Anizio da Silva </sub>](https://github.com/raphaelaniziodasilva)  
 [<sub>Víctor André Santos Franco</sub>](https://github.com/VictorF05)
-
-## Frontend
-[<sub>Pedro Gonçalves</sub>](https://github.com/Reygis)  
-[<sub>Matheus Allan Da Silva </sub>](https://github.com/Reygis)  
