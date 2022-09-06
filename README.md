@@ -11,7 +11,7 @@
 ---
 
 *descrição do projeto*
-<a href="#" target="_blank">link do repositório frontend</a>
+<a href="https://github.com/pedrogoncaalves/Social-Parrot-ReactRedux" target="_blank">link do repositório frontend</a>
 
 ---
 ## :memo: Tecnologias utilizadas: 
