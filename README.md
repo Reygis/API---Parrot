@@ -29,7 +29,17 @@
 3. Criar banco de dados sem tabelas  `npm run db:create`
 4. Popular o banco de dados `npm run seed`
 5. Passos 1 a 4 somente realizar na 1º instalação  Script para rodar a API `npm run dev` 
-  
+6. corpo do create user `{
+	"name": string,
+	"email": string,
+	"password": string,
+	"apartment": string,
+	"userphoto": string
+}`  
+7. corpo do create post `{
+	"content": string
+}`
+
 ---
 ## :memo: Funcionalidades criadas: 
 
