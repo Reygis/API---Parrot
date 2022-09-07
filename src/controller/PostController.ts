@@ -62,6 +62,5 @@ export class PostController {
             }
         })
         return res.send(posts)
-        const e = "profile";
     }
 }

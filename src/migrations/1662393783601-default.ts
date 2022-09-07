@@ -1,5 +1,5 @@
 import { MigrationInterface, QueryRunner } from "typeorm";
-const t = "profile";
+
 export class default1662393783601 implements MigrationInterface {
     name = 'default1662393783601'
 
