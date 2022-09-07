@@ -34,10 +34,11 @@ export class AuthController {
 
         return res.send({
             token:token,
-            iduser:user.iduser,
+            
+            user:{iduser:user.iduser,
             name:user.name,
             email:user.email,
-            apartment:user.apartment
+            apartment:user.apartment}
         })
     }
 }
