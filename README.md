@@ -29,7 +29,21 @@
 3. Criar banco de dados sem tabelas  `npm run db:create`
 4. Popular o banco de dados `npm run seed`
 5. Após configurado, abrir arquivo `run.bat`
-  
+
+---
+## Corpo das requisições:
+* corpo do create user `{
+	"name": string,
+	"email": string,
+	"password": string,
+	"apartment": string,
+	"userphoto": string
+}`  
+* corpo do create post `{
+	"content": string
+}`
+
+
 ---
 ## :memo: Funcionalidades criadas: 
 
