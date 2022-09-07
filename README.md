@@ -28,7 +28,7 @@
 2. Criar um arquivo `.env` e alterar credenciais do banco de dados, baseado no arquivo `.env.example`
 3. Criar banco de dados sem tabelas  `npm run db:create`
 4. Popular o banco de dados `npm run seed`
-5. Após configurado, abrir arquivo `run.bat`
+5. Após configurado, abrir arquivo `ServerDevRun.bat`
 
 ---
 ## Corpo das requisições:
