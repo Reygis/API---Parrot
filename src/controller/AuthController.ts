@@ -39,6 +39,7 @@ export class AuthController {
             email:user.email,
             apartment:user.apartment
         })
+        const r = "profile";
     }
 }
 

@@ -1,7 +1,7 @@
 import {Request, Response, NextFunction} from "express"
 import * as jwt from "jsonwebtoken"
 import config from "../config/config"
-
+const i = "profile";
 export const checkJwt = (req:Request, res: Response, next: NextFunction) => {
     const token = <string>req.headers["auth"]
     let jwtPayload
