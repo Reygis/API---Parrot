@@ -9,7 +9,7 @@ export class PostController {
         const { authorization} = req.headers;
         if (!authorization){return}
         const token = authorization.split(" ")[1];
-        // const token = <string>req.headers["bearer"]
+        
         let iduser
 
         try {

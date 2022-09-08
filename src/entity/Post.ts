@@ -2,13 +2,12 @@ import {
     Entity, 
     PrimaryGeneratedColumn, 
     Column,
-    Unique,
     CreateDateColumn,
     UpdateDateColumn ,
     ManyToOne,
     JoinColumn
 } from "typeorm"
-import {Length, IsNotEmpty} from "class-validator"
+import {Length} from "class-validator"
 import { User } from "./User"
 
 
