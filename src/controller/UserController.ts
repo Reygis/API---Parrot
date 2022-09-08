@@ -1,6 +1,8 @@
 import { Request, Response } from 'express'
 import { validate } from "class-validator";
 import { userRepository } from "../repositories/userRepository";
+import jwt from 'jsonwebtoken';
+import config from '../config/config';
 
 import { User } from "../entity/User";
 
@@ -60,12 +62,20 @@ export class UserController {
     }
 
     async editUser(req:Request, res:Response) {      
+        const {authorization} = req.headers;
+        if (!authorization){return}
+        const token = authorization.split(" ")[1];
         
-        const iduser: number = parseInt(req.params.iduser, 10)
+        let iduser
+        try {
+            const jwtPayload = <any>jwt.verify(token, config.jwtSecret)
+            iduser = jwtPayload.userId
+        } catch (error) {
+            return res.status(401).send
+        }
        
         const {name, email, apartment, userphoto} = req.body   
         
-
         let user: User
         try {
             user = await userRepository.findOneByOrFail({iduser})
@@ -73,21 +83,10 @@ export class UserController {
             return res.status(404).send("User not found")
         }
 
-        if(name) {
-            user.name = name
-        }
-
-        if(email) {
-            user.email = email
-        }
-
-        if(apartment) {
-            user.apartment = apartment
-        }
-
-        if(userphoto) {
-            user.userphoto = userphoto
-        }
+        if(name) user.name = name
+        if(email) user.email = email
+        if(apartment) user.apartment = apartment
+        if(userphoto) user.userphoto = userphoto
 
         const errors = await validate(user)
         if (errors.length > 0) {

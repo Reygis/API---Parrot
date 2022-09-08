@@ -1,7 +1,7 @@
 # Parrot Hands_On04
 
 <p align="center">
-  <img src="./docs/logoGama.png" width="50%">
+  <img src="./docs/logoGama.png" width="40%">
 </p>
 <p align="center">
 <a href="https://insomnia.rest/run/?label=Parrot_API&uri=https%3A%2F%2Fraw.githubusercontent.com%2FReygis%2FApiParrot%2Fmain%2Fdocs%2FInsomnia_2022-09-08.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
@@ -47,7 +47,7 @@ Todas as informações da documentação da API tambem podem ser vistas ao clica
 - rota admin login `POST` `http://localhost:3030/admin/login`
 
 * rota criar usuario `POST` `http://localhost:3030/user`
-* rota editar usuario `PUT` `http://localhost:3030/user/:iduser`
+* rota editar usuario `PUT` `http://localhost:3030/user`
 
 + rota criar post  `POST` `http://localhost:3030/post`
 + rota listar todos os post  `GET` `http://localhost:3030/post`

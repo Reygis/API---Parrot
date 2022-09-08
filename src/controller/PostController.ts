@@ -1,12 +1,12 @@
 import { Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
-import config from '../config/config'
+import config from '../config/config';
 import { userRepository } from './../repositories/userRepository';
 import { postRepository } from './../repositories/postRepository';
 
 export class PostController {
     async create (req: Request, res: Response) {
-        const { authorization} = req.headers;
+        const {authorization} = req.headers;
         if (!authorization){return}
         const token = authorization.split(" ")[1];
         
