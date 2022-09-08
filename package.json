@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec ts-node ./src/index.ts",
+    "build": "rm -rf ./dist && tsc",
     "migration:generate": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:generate ./src/migrations/default",
     "migration:run": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:run",
-    "build": "rm -rf ./dist && tsc",
-    "start": "node ./dist/index.js",
+    "db:drop": "ts-node ./node_modules/typeorm-extension/dist/cli/index.js db:drop",
     "db:create": "ts-node ./node_modules/typeorm-extension/dist/cli/index.js db:create",
-    "seed": "ts-node ./node_modules/typeorm-extension/dist/cli/index.js seed"
+    "seed": "ts-node ./node_modules/typeorm-extension/dist/cli/index.js seed",
+    "start": "node ./dist/index.js",
+    "dev": "nodemon --exec ts-node ./src/index.ts"
   },
   "keywords": [],
   "author": "",
