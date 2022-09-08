@@ -2,7 +2,14 @@ import {Request, Response, NextFunction} from "express"
 import * as jwt from "jsonwebtoken"
 import config from "../config/config"
 export const checkJwt = (req:Request, res: Response, next: NextFunction) => {
-    const token = <string>req.headers["auth"]
+    const { authorization } = req.headers;
+    
+    if (!authorization){
+        return res.status(403).json({message: "User not logged in"});
+    }
+
+    const token = authorization.split(" ")[1];
+
     let jwtPayload
     
     try {

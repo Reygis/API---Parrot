@@ -29,7 +29,7 @@ export class User {
     apartment: number
     
     @Column()
-    @Length(6, 120)
+    @Length(5, 120)
     password: string
 
     @Column()

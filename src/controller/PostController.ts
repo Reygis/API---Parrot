@@ -6,7 +6,10 @@ import { postRepository } from './../repositories/postRepository';
 
 export class PostController {
     async create (req: Request, res: Response) {
-        const token = <string>req.headers["auth"]
+        const { authorization} = req.headers;
+        if (!authorization){return}
+        const token = authorization.split(" ")[1];
+        // const token = <string>req.headers["bearer"]
         let iduser
 
         try {
