@@ -9,8 +9,13 @@
 
 
 ---
+<p>
+Projeto Parrot, HandsOn04 da GamaAcademy no curso XP43 <br>
+Neste Projeto foi proposto a criação da rede social Parrot, um sistema onde condomínios podem contratar para incentivar a interação
+entre os moradores. <br>
+A plataforma permite que os usuários façam publicações que ficam visíveis para toda comunidade.
+</p>
 
-*descrição do projeto*
 <a href="https://github.com/pedrogoncaalves/Social-Parrot-ReactRedux" target="_blank">link do repositório frontend</a>
 
 ---
@@ -22,51 +27,97 @@
 
 
 ---
-## Como usar a API:
+## Como instalar a API:
 
-1. após clonar o repositório, executar o comando `npm install` ou `yarn install`
-2. Criar um arquivo `.env` e alterar credenciais do banco de dados, baseado no arquivo `.env.example`
-3. Criar banco de dados sem tabelas  `npm run db:create`
-4. Popular o banco de dados `npm run seed`
-5. Após configurado, abrir arquivo `ServerDevRun.bat`
-
----
-## Corpo das requisições:
-* corpo do create user `{
-	"name": string,
-	"email": string,
-	"password": string,
-	"apartment": string,
-	"userphoto": string
-}`  
-* corpo do create post `{
-	"content": string
-}`
-
+1. após clonar o repositório, criar um arquivo `.env` e alterar credenciais do banco de dados, baseado no arquivo `.env.example`
+2. executar o arquivo `install.bat` 
+ + (*ATENÇÃO - ao iniciar o arquivo `install` será excluido o banco de dados e criado um novo, onde será populado conforme explicado na documentação abaixo*) 
+3. Após instalação finalizar , abrir arquivo `ServerDevRun.bat`
 
 ---
-## :memo: Funcionalidades criadas: 
+## :page_with_curl: Documentação
+
+Todas as informações da documentação da API tambem podem ser vistas ao clicar em "Run in Insomnia" neste README    
+
+---
+### Funcionalidades criadas: 
+**todas as rotas demandam login, com exceção das rotas de login e criar usuario**
+
+- rota user login `POST` `http://localhost:3030/login`
+- rota admin login `POST` `http://localhost:3030/admin/login`
 
 * rota criar usuario `POST` `http://localhost:3030/user`
 * rota editar usuario `PUT` `http://localhost:3030/user/:iduser`
-* rota listar todos os usuarios `GET` `http://localhost:3030/user`
-* rota listar usuario pelo iduser `GET` `http://localhost:3030/user/:iduser`
 
 + rota criar post  `POST` `http://localhost:3030/post`
 + rota listar todos os post  `GET` `http://localhost:3030/post`
 + rota listar todos os post de um unico usuario  `GET` `http://localhost:3030/post/:iduser`
 
-- rota login `POST` `http://localhost:3030/login`
+**rotas exclusivas ao admin**
+* rota listar todos os usuarios `GET` `http://localhost:3030/admin/users`
+* rota listar usuario pelo iduser `GET` `http://localhost:3030/admin/:iduser`
 
 ---
-## :page_with_curl: Documentação
+### Corpo das requisições:
+<p>
+header = Content-Type : application/json<br>
+authentication : Bearer token
+</p>
 
-Todas as informações da documentação da API podem ser vistas ao clicar em "Run in Insomnia" neste README    
-
+* corpo do login 
+```
+{
+	"email": string,
+	"password": string
+}
+```
+* corpo do create user / edit user 
+```
+{
+	"name": string,
+	"email": string,
+	"password": string,
+	"apartment": string,
+	"userphoto": string
+}
+```  
+* corpo do create post 
+```
+{
+	"content": string
+}
+```
 
 ---
+### Seeds criados ao instalar projeto:
 
+* Admin:
+```
+{			
+  name: 'Admin',
+  email: 'admin@admin.com',
+  apartment: 0,
+  password: 'admin'
+  role: 'ADMIN',
+}
+```
 
+* Users:
+```
+{
+  name: 'user1',
+  email: 'user1@user.com',
+  password: 'admin'
+
+}
+{
+  name: 'user2',
+  email: 'user2@user.com',
+  password: 'admin'
+}
+```
+* Será criado 2 Posts.
+---
 ## :keyboard: Desenvolvedores participantes
 
 [<sub>Reygis Azevedo</sub>](https://github.com/Reygis)  
