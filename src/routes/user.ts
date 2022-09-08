@@ -4,7 +4,7 @@ import {checkJwt} from "../middleware/checkJwt"
 
 const router = Router()
 
-router.post("/", new UserController().create )
+router.post("/", new UserController().create)
 router.put("/", checkJwt, new UserController().editUser)
 
 export default router

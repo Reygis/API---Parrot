@@ -8,7 +8,7 @@ export class AuthController {
      async login(req: Request, res: Response) {
         let {email, password} = req.body
 
-       const userExists = await userRepository.findOneBy({ email})
+       const userExists = await userRepository.findOneBy({email})
 
        if (!(userExists && password)) {
            return res.status(400).send('E-mail ou senha inválidos')

@@ -6,7 +6,7 @@ import { checkRole } from "../middleware/checkRole"
 
 const router = Router()
 
-router.post("/login", new AuthController().login )
+router.post("/login", new AuthController().login)
 router.get("/users", [checkJwt, checkRole("ADMIN")], new UserController().listAll)
 router.get("/:iduser", [checkJwt, checkRole("ADMIN")], new UserController().getOneById)
 
