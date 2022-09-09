@@ -131,6 +131,19 @@ authentication : Bearer token
 ---
 ## :keyboard: Desenvolvedores participantes
 
-[<sub>Reygis Azevedo</sub>](https://github.com/Reygis)  
-[<sub>Raphael Anizio da Silva </sub>](https://github.com/raphaelaniziodasilva)  
-[<sub>Víctor André Santos Franco</sub>](https://github.com/VictorF05)
+<h2>
+<table align=center>
+  <tr>
+
+   <td align="center"> <img src="https://avatars.githubusercontent.com/u/103973457?v=4" width=175/></br><a href="https://www.linkedin.com/in/reygis/"> Reygis Meira </a>
+   </td>
+   <td align="center"> <img src="https://avatars.githubusercontent.com/u/96752946?v=4"  width=175/></br><a href="https://www.linkedin.com/in/raphael-anizio-da-silva-0173211b8/"> Raphael Anizio da Silva </a>
+   </td>
+    <td align="center"> <img src="https://avatars.githubusercontent.com/u/81822864?v=4" width=175/></br><a href="https://www.linkedin.com/in/victorf05/"> Víctor Franco </a>
+   
+  </tr>
+</table> </h2>
+
+---
+
+
