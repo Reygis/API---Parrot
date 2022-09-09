@@ -5,6 +5,7 @@
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
 		"module": "commonjs",
+		"rootDir": "./src",
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
 		"allowJs": true,
@@ -15,9 +16,9 @@
 		"noImplicitAny": true,
 		"strictPropertyInitialization": false
 	},
-	"include": ["src/**/*"],
-	"exclude": ["node_modules", "./coverage","dist","__tests__","jest.config.js"],
+	"exclude": ["node_modules", "./coverage", "./dist", "__tests__", "jest.config.js"],
 	"ts-node": {
+		"transpileOnly": true,
 		"files": true
 	}
 }
