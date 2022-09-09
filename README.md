@@ -19,11 +19,22 @@ A plataforma permite que os usuários façam publicações que ficam visíveis p
 <a href="https://github.com/pedrogoncaalves/Social-Parrot-ReactRedux" target="_blank">link do repositório frontend</a>
 
 ---
-## :memo: Tecnologias utilizadas: 
+## 🛠 Tecnologias utilizadas
 
-* <a href="https://expressjs.com/pt-br/">Express</a>
-* <a href="https://typeorm.io/">Typeorm</a>
-* <a href="https://github.com/tada5hi/typeorm-extension">typeorm-extension</a>
+As seguintes ferramentas foram usadas na construção do projeto:
+<br><br>
+
+<div align="left">
+  
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" width="52" alt="TypeScript logo" />          
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" width="52" alt="nodejs logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="40" width="52" alt="mysql logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" height="40" width="52" alt="express logo"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" height="40" width="52" alt="npm logo" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" height="40" width="52" alt="Jest logo" /> 
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" width="52" alt="git logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="40" width="52" alt="github logo"  />
+</div>
 
 
 ---
@@ -40,7 +51,7 @@ A plataforma permite que os usuários façam publicações que ficam visíveis p
 Todas as informações da documentação da API tambem podem ser vistas ao clicar em "Run in Insomnia" neste README    
 
 ---
-### Funcionalidades criadas: 
+### :file_folder: Funcionalidades da API
 **todas as rotas demandam login, com exceção das rotas de login e criar usuario**
 
 - rota user login `POST` `http://localhost:3030/login`
