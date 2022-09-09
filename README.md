@@ -4,7 +4,7 @@
   <img src="./docs/logoGama.png" width="40%">
 </p>
 <p align="center">
-<a href="https://insomnia.rest/run/?label=Parrot_API&uri=https%3A%2F%2Fraw.githubusercontent.com%2FReygis%2FApiParrot%2Fmain%2Fdocs%2FInsomnia_2022-09-08.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
+<a href="https://insomnia.rest/run/?label=Parrot_grupo07&uri=https%3A%2F%2Fraw.githubusercontent.com%2FReygis%2FApiParrot%2Fmain%2Fdocs%2FInsomnia_2022-09-09.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
 </p>
 
 
@@ -19,11 +19,22 @@ A plataforma permite que os usuários façam publicações que ficam visíveis p
 <a href="https://github.com/pedrogoncaalves/Social-Parrot-ReactRedux" target="_blank">link do repositório frontend</a>
 
 ---
-## :memo: Tecnologias utilizadas: 
+## 🛠 Tecnologias utilizadas
 
-* <a href="https://expressjs.com/pt-br/">Express</a>
-* <a href="https://typeorm.io/">Typeorm</a>
-* <a href="https://github.com/tada5hi/typeorm-extension">typeorm-extension</a>
+As seguintes ferramentas foram usadas na construção do projeto:
+<br><br>
+
+<div align="left">
+  
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" width="52" alt="TypeScript logo" />          
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" width="52" alt="nodejs logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="40" width="52" alt="mysql logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" height="40" width="52" alt="express logo"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" height="40" width="52" alt="npm logo" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" height="40" width="52" alt="Jest logo" /> 
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" width="52" alt="git logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="40" width="52" alt="github logo"  />
+</div>
 
 
 ---
@@ -40,7 +51,7 @@ A plataforma permite que os usuários façam publicações que ficam visíveis p
 Todas as informações da documentação da API tambem podem ser vistas ao clicar em "Run in Insomnia" neste README    
 
 ---
-### Funcionalidades criadas: 
+### :file_folder: Funcionalidades da API
 **todas as rotas demandam login, com exceção das rotas de login e criar usuario**
 
 - rota user login `POST` `http://localhost:3030/login`
@@ -120,6 +131,19 @@ authentication : Bearer token
 ---
 ## :keyboard: Desenvolvedores participantes
 
-[<sub>Reygis Azevedo</sub>](https://github.com/Reygis)  
-[<sub>Raphael Anizio da Silva </sub>](https://github.com/raphaelaniziodasilva)  
-[<sub>Víctor André Santos Franco</sub>](https://github.com/VictorF05)
+<h2>
+<table align=center>
+  <tr>
+
+   <td align="center"> <img src="https://avatars.githubusercontent.com/u/103973457?v=4" width=175/></br><a href="https://www.linkedin.com/in/reygis/"> Reygis Meira </a>
+   </td>
+   <td align="center"> <img src="https://avatars.githubusercontent.com/u/96752946?v=4"  width=175/></br><a href="https://www.linkedin.com/in/raphael-anizio-da-silva-0173211b8/"> Raphael Anizio da Silva </a>
+   </td>
+    <td align="center"> <img src="https://avatars.githubusercontent.com/u/81822864?v=4" width=175/></br><a href="https://www.linkedin.com/in/victorf05/"> Víctor Franco </a>
+   
+  </tr>
+</table> </h2>
+
+---
+
+
