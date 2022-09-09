@@ -34,7 +34,6 @@ export class AuthController {
 
         return res.send({
             token:token,
-            
             user:{iduser:user.iduser,
             name:user.name,
             email:user.email,

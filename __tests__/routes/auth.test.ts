@@ -20,4 +20,13 @@ describe("Auth route tests", () => {
             })
             .expect(200)
     })
+    test("User login, not exist", async () => {
+        await request(app)
+            .post("/login")
+            .send( { 
+                "email": "usuarioerrado@user.com",
+                "password": "admin"
+            })
+            .expect(400)
+    })
 })
