@@ -76,13 +76,7 @@ export class UserController {
        
         const {name, email, apartment, userphoto} = req.body   
         
-        let user: User
-        try {
-            user = await userRepository.findOneByOrFail({iduser})
-        } catch (error) {
-            return res.status(404).send("User not found")
-        }
-
+        let user: User = await userRepository.findOneByOrFail({iduser})
         if(name) user.name = name
         if(email) user.email = email
         if(apartment) user.apartment = apartment
@@ -96,7 +90,7 @@ export class UserController {
         try {
             await userRepository.save(user)    
         } catch (error) {
-            return res.status(409).send("Usuario edited")
+            return res.status(409)
         }
 
         return res.status(201).send("edited user")

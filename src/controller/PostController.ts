@@ -24,12 +24,12 @@ export class PostController {
 
         if (!user) return res.status(404).json({message: 'User not found'})
 
-        const newPost = postRepository.create({
-            content,
-            user
-        })
-
-        await postRepository.save(newPost)
+        try {
+            const newPost = postRepository.create({content,user})
+            await postRepository.save(newPost)
+        } catch (error) {
+            return res.status(400).send('not suported content')            
+        }
 
         return res.status(201).json({message: 'Post created successfully'})
     }
@@ -52,10 +52,26 @@ export class PostController {
     }
 
     async listAllByUserId (req: Request, res: Response) {
-        const iduser: number = parseInt(req.params.iduser, 10)
-        const user = userRepository.findOneBy({iduser})
+        const {authorization} = req.headers;
+        if (!authorization){return}
+        const token = authorization.split(" ")[1];
+        
+        let iduser
 
-        if (!user) return res.status(404).json({message: 'User not found'})
+        try {
+            const jwtPayload = <any>jwt.verify(token, config.jwtSecret)
+            iduser = jwtPayload.userId
+        } catch (error) {
+            return res.status(401).send
+        }
+        
+        let user
+
+        try {
+            user = await userRepository.findOneByOrFail({iduser})
+        } catch (error) {
+            return res.status(404).send("User not found")            
+        }
 
         const posts = await postRepository.find({
             where: {

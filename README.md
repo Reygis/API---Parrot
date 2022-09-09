@@ -51,7 +51,7 @@ Todas as informações da documentação da API tambem podem ser vistas ao clica
 
 + rota criar post  `POST` `http://localhost:3030/post`
 + rota listar todos os post  `GET` `http://localhost:3030/post`
-+ rota listar todos os post de um unico usuario  `GET` `http://localhost:3030/post/:iduser`
++ rota listar todos os post de um unico usuario  `GET` `http://localhost:3030/post/myposts`
 
 **rotas exclusivas ao admin**
 * rota listar todos os usuarios `GET` `http://localhost:3030/admin/users`
